@@ -58,6 +58,19 @@ export default function Component() {
     return results;
   };
 
+  const getWeatherInfo = async (lat, long) => {
+    try {
+      const response = await axios.get(
+        `http://api.weatherapi.com/v1/forecast.json?key=bfcff84650f8497e945111207242707&q=${lat},${long}&days=1&aqi=no&alerts=yes`
+      )
+      return response.data.alerts.alert;
+    }
+    catch (error) {
+      console.error(`Error fetching weather information for ${area}:`, error)
+      return null;
+    }
+  }
+
   useEffect(() => {
     let map;
 
@@ -80,6 +93,34 @@ export default function Component() {
 
           var marker = L.marker([latitude, longitude]).addTo(map);
           marker.bindPopup("You are here").openPopup();
+
+          const weatherAlerts = getWeatherInfo(latitude, longitude);
+          //const LeWeatherAlerts = ["Tornado", "Earthquake", "Tsunami"];
+          //let weatherAlerts = LeWeatherAlerts;          
+          if(weatherAlerts.length == null){
+            var circle = L.circle([latitude, longitude], {
+              color: "green",
+              fillColor: "#dcdcdc",
+              fillOpacity: 0.5,
+              radius: 500,
+            }).addTo(map);
+            circle.bindPopup("No weather alerts");
+            console.log("here");
+          }
+          else{
+            var circle = L.circle([latitude, longitude], {
+              color: "red",
+              fillColor: "#2F2F2F",
+              fillOpacity: 0.5,
+              radius: 500,
+            }).addTo(map);
+            let string = "";
+            for (let i = 0; i < weatherAlerts.length; i++) {
+              string = string + weatherAlerts[i] + " ";
+            }
+            circle.bindPopup(`WEATHER ALERTS!!! ${string}`);
+            
+          }
 
           // Define colors for different crime types
           const crimeColors = {
