@@ -128,6 +128,8 @@ export default function Component() {
             "Property Related Crimes": "#ff7800",
             "Drug and Weapon Related Crimes": "#800080",
             "Child Related Crime": "#0000ff",
+            "No weather alerts" : "#dcdcdc",
+            "WEATHER ALERTS!!!" : "#2F2F2F",
           };
           const crimeTips = {
             "Abduction, Violent Assault, Attempted Murder, Attempted Sexual Offence, Carjacking, Common Assault, Common Robbery, Sexual Offence, Culpable Homicide, Murder, Public Violence, Rape":
