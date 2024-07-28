@@ -62,14 +62,13 @@ export default function Component() {
     try {
       const response = await axios.get(
         `http://api.weatherapi.com/v1/forecast.json?key=bfcff84650f8497e945111207242707&q=${lat},${long}&days=1&aqi=no&alerts=yes`
-      )
+      );
       return response.data.alerts.alert;
-    }
-    catch (error) {
-      console.error(`Error fetching weather information for ${area}:`, error)
+    } catch (error) {
+      console.error(`Error fetching weather information for ${area}:`, error);
       return null;
     }
-  }
+  };
 
   useEffect(() => {
     let map;
@@ -96,8 +95,8 @@ export default function Component() {
 
           const weatherAlerts = getWeatherInfo(latitude, longitude);
           //const LeWeatherAlerts = ["Tornado", "Earthquake", "Tsunami"];
-          //let weatherAlerts = LeWeatherAlerts;          
-          if(weatherAlerts.length == null){
+          //let weatherAlerts = LeWeatherAlerts;
+          if (weatherAlerts.length == null) {
             var circle = L.circle([latitude, longitude], {
               color: "green",
               fillColor: "#dcdcdc",
@@ -106,8 +105,7 @@ export default function Component() {
             }).addTo(map);
             circle.bindPopup("No weather alerts");
             console.log("here");
-          }
-          else{
+          } else {
             var circle = L.circle([latitude, longitude], {
               color: "red",
               fillColor: "#2F2F2F",
@@ -119,7 +117,6 @@ export default function Component() {
               string = string + weatherAlerts[i] + " ";
             }
             circle.bindPopup(`WEATHER ALERTS!!! ${string}`);
-            
           }
 
           // Define colors for different crime types
@@ -128,8 +125,8 @@ export default function Component() {
             "Property Related Crimes": "#ff7800",
             "Drug and Weapon Related Crimes": "#800080",
             "Child Related Crime": "#0000ff",
-            "No weather alerts" : "#dcdcdc",
-            "WEATHER ALERTS!!!" : "#2F2F2F",
+            "No weather alerts": "#dcdcdc",
+            "Weather Alerts": "#2F2F2F",
           };
           const crimeTips = {
             "Abduction, Violent Assault, Attempted Murder, Attempted Sexual Offence, Carjacking, Common Assault, Common Robbery, Sexual Offence, Culpable Homicide, Murder, Public Violence, Rape":
@@ -138,6 +135,8 @@ export default function Component() {
               "#ff7800",
             "DUI, Drug-related crime": "#800080",
             "Kidnapping, Rape, Sexual Assault": "#0000ff",
+            "There are no weather alerts in this area": "#dcdcdc",
+            "There are weather alerts in this area": "#2F2F2F",
           };
 
           const legend = L.control({ position: "bottomleft" });
