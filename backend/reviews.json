@@ -1,0 +1,62 @@
+[
+  {
+    "time": "2024-07-28T12:15:24.759Z",
+    "rating": 4,
+    "input": "test",
+    "messages": []
+  },
+  {
+    "time": "2024-07-28T12:15:41.671Z",
+    "rating": 4,
+    "input": "test2",
+    "messages": []
+  },
+  {
+    "time": "2024-07-28T12:27:03.062Z",
+    "rating": 4,
+    "input": "test45",
+    "messages": []
+  },
+  {
+    "time": "2024-07-28T12:29:50.199Z",
+    "rating": 4,
+    "input": "",
+    "messages": []
+  },
+  {
+    "time": "2024-07-28T12:41:11.807Z",
+    "rating": 4,
+    "input": "dasads",
+    "messages": []
+  },
+  {
+    "time": "2024-07-28T13:09:38.579Z",
+    "rating": 1,
+    "input": "i hated it",
+    "messages": [
+      {
+        "type": "user",
+        "text": "I am travelling to Sandton, what should I be careful for?"
+      },
+      {
+        "type": "bot",
+        "text": "Hello! Welcome to Johannesburg! Sandton is a bustling and vibrant area, but like any major city, it's important to be aware of your surroundings and take precautions to ensure your safety.\n\nIn Sandton, abductions have been reported recently. Here are some safety tips to keep in mind:\n\n1. **Stay Vigilant:** Always be aware of your surroundings, especially in less crowded areas or during night-time.\n2. **Travel in Groups:** Whenever possible, travel with a companion or in a group.\n3. **Use Trusted Transportation:** Opt for well-known and reputable transport services. Avoid accepting rides from strangers or unlicensed cabs.\n4. **Avoid Distractions:** Limit the use of your phone or other devices when walking in public areas.\n5. **Secure Your Belongings:** Keep your valuables like wallets, phones, and passports secure and out of sight.\n6. **Know Your Route:** Plan your route in advance and avoid unfamiliar shortcuts.\n\nIf you find yourself in an emergency or witness a crime, here are the essential contact numbers and the nearest police station:\n\n- **Police:** 10111\n- **Ambulance:** 10177\n- **Fire Department:** 011 375 5911\n- **General Emergency (mobile):** 112\n\n**Nearest Police Station:**\nSandton Police Station  \nAddress: 3 Summit Rd, Morningside, Sandton, 2196  \nPhone: 011 722 4200\n\nStay safe and enjoy your time in Johannesburg! If you have any other questions or need further assistance, feel free to ask."
+      }
+    ]
+  },
+  {
+    "time": "2024-07-28T13:11:44.658Z",
+    "rating": 5,
+    "input": "very helpful",
+    "messages": [
+      {
+        "type": "user",
+        "text": "What are the most common areas of DUIs?"
+      },
+      {
+        "type": "bot",
+        "text": "In Johannesburg, the area of Florida has been identified as having a notable incidence of DUIs (driving under the influence). If you are traveling in this area, it’s essential to exercise caution, especially when driving at night or during weekends. Consider using trusted taxi services or ride-sharing apps if you plan to consume alcohol.\n\nIf you witness a DUI or find yourself in an unsafe situation, here are some important emergency contact numbers:\n1. Police: 10111\n2. Ambulance: 10177\n3. Fire Department: 011 375 5911\n4. General Emergency: 112 (on mobile)\n\nFor police assistance in the Florida area, you can contact the Florida Police Station:\n- Address: 1 Madeline St, Florida, Roodepoort, 1710\n\nRemember to stay safe and don’t hesitate to reach out to these emergency services if you need help."
+      }
+    ]
+  }
+]
