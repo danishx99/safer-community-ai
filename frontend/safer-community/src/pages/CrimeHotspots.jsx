@@ -88,11 +88,20 @@ export default function Component() {
             "Drug and Weapon Related Crimes": "#800080",
             "Child Related Crime": "#0000ff",
           };
+          const crimeTips = {
+            "Abduction, Violent Assault, Attempted Murder, Attempted Sexual Offence, Carjacking, Common Assault, Common Robbery, Sexual Offence, Culpable Homicide, Murder, Public Violence, Rape":
+              "#f03",
+            "Arson, Non-Residential Burglary, Residential Burglary, Malicious damage to property, Non-Residential Robbery, Residential Robbery":
+              "#ff7800",
+            "DUI, Drug-related crime": "#800080",
+            "Kidnapping, Rape, Sexual Assault": "#0000ff",
+          };
 
           const legend = L.control({ position: "bottomleft" });
           legend.onAdd = () => {
             const div = L.DomUtil.create("div", "info legend");
             const categories = Object.keys(crimeColors);
+            const tips = Object.keys(crimeTips);
             div.style.backgroundColor = "white";
             div.style.padding = "10px";
             div.style.borderRadius = "5px";
@@ -112,19 +121,14 @@ export default function Component() {
 
             for (let i = 0; i < categories.length; i++) {
               const crime = categories[i];
+              const tooltip = tips[i];
               const color = crimeColors[crime];
 
               // Add <i> element for tooltip
-              div.innerHTML +=
-                '<i style="background:' +
-                color +
-                '" "' +
-                crime +
-                ' details">' +
-                "</i> " +
-                '<span data-tippy-content="Testing" style="color: black;">' +
-                crime +
-                "</span><br>";
+              div.innerHTML += `
+  <i style="background: ${color}" data-tippy-content="${crime} details"></i> 
+  <span data-tippy-content="${tooltip}" style="color: black;">${crime}</span><br>
+`;
             }
 
             // Append div to the document to ensure it's available for Tippy.js
