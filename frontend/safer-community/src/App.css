@@ -134,6 +134,66 @@
       transform: rotate(360deg);
     }
   }
+  
+  .leaflet-routing-alt {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .leaflet-routing-alt .leaflet-routing-waypoint {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .leaflet-routing-alt .leaflet-routing-distance {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .leaflet-routing-alt .leaflet-routing-instruction {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    color: #007bff; /* Change to your desired color */
+  }
 
+  /* Style for the Add Waypoint button */
+button.leaflet-routing-add-waypoint {
+  background-color: #007bff; /* Blue background */
+  border: none; /* Remove default border */
+  color: #333; /* White text */
+  padding: 10px 15px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 14px; /* Font size */
+  font-family: Arial, sans-serif; /* Font family */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button.leaflet-routing-add-waypoint:hover {
+  background-color: #7D9B76; /* Darker blue on hover */
+}
+
+button.leaflet-routing-add-waypoint:active {
+  background-color: #7D9B76; /* Even darker blue when clicked */
+}
+
+button.leaflet-routing-add-waypoint:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add custom focus ring */
+}
+/* Hide the Leaflet routing container */
+div.leaflet-routing-container.leaflet-bar.leaflet-control {
+  display: none;
+}
+
+
+  
 
   

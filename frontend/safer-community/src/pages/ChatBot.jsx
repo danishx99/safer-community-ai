@@ -46,6 +46,13 @@ export default function Component() {
             >
               Crime Hotspots
             </Link>
+            <Link
+              to="/navigate"
+              className="text-xl text-black hover:text-[#7D9B76] font-medium hover:underline underline-offset-4"
+              prefetch="false"
+            >
+              Navigate
+            </Link>
           </nav>
         </div>
       </header>
